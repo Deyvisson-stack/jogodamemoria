@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+
+body {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    gap: 16px;
+}
+
+.descricao {
+    font-size: 36px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    animation: pulsar 1s infinite alternate ease-in-out;
+}
+
+@keyframes pulsar {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 120px);
+    gap: 25px;
+}
+
+.button {
+    width: auto;
+    max-width: 250px;
+    padding: 10px 20px;
+    background-color: orange;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-size: 26px;
+    justify-self: start;
+    align-self: center;
+}
+
+.card {
+    position: relative;
+    cursor: pointer;
+}
+
+.back {
+    background-color: orange;
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    border-radius: 8px;
+    font-size: 50px;
+    font-weight: 600;
+    place-content: center;
+    display: grid;
+    backface-visibility: hidden;
+    transition: all 500ms ease;
+}
+
+.front {
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    transition: all 500ms ease;
+}
+
+.card-front .front {
+    transform: rotateY(0deg);
+}
+
+.card-front .back {
+    transform: rotateY(180deg);
+}
