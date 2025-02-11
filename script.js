@@ -5,12 +5,12 @@ let firstCard = '';
 let secondCard = '';
 
 const Itens = [
-    { name: 'html', imagem: '/imagens/html.png' },
-    { name: 'css', imagem: '/imagens/css.png' },
-    { name: 'java', imagem: '/imagens/java.png' },
-    { name: 'github', imagem: '/imagens/github.png' },
-    { name: 'photoshop', imagem: '/imagens/photoshop.png' },
-    { name: 'react', imagem: '/imagens/react.png' },
+    { name: 'html', imagem: 'imagens/html.png' },
+    { name: 'css', imagem: 'imagens/css.png' },
+    { name: 'java', imagem: 'imagens/java.png' },
+    { name: 'github', imagem: 'imagens/github.png' },
+    { name: 'photoshop', imagem: 'imagens/photoshop.png' },
+    { name: 'react', imagem: 'imagens/react.png' },
 ];
 buttonReset.addEventListener('click', () => location.reload())
 function createCards() {
